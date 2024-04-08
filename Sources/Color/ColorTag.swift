@@ -9,6 +9,9 @@
 import Leaf
 
 public struct ColorTag: LeafTag {
+
+    public init() { }
+
     public func render(_ ctx: LeafContext) throws -> LeafData {
         guard let colorName = ctx.parameters.first?.string else {
             throw "Unable to convert parameter to string"
